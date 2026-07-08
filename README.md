@@ -81,4 +81,4 @@ New skills are added as sibling folders under `skills/`.
 
 ## License
 
-[MIT](LICENSE) © 2026 Antonio Scibilia
+[MIT](LICENSE) © 2026 nynuz
