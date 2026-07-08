@@ -31,6 +31,29 @@ npx skills add https://github.com/nynuz/ml-serving-skills --skill hf-model-to-ap
 npx skills add https://github.com/nynuz/ml-serving-skills -y
 ```
 
+## Usage
+
+Once installed, invoke the skill from your AI coding agent by describing what you want,
+or by naming the skill directly. A minimal example:
+
+> Use the `hf-model-to-api` skill to turn the Hugging Face model `distilbert-base-uncased-finetuned-sst-2-english` into a local FastAPI service.
+
+The agent will inspect the model, detect the task family, scaffold the project, and give
+you the exact commands to run it locally:
+
+```bash
+cd distilbert-base-uncased-finetuned-sst-2-english-api
+python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload --port 8000
+```
+
+Then open http://127.0.0.1:8000/docs to try the API interactively.
+
+You don't have to name the skill explicitly — prompts like *"wrap this NER model as a
+local API"* or *"serve sentence-transformers/all-MiniLM-L6-v2 with FastAPI"* will trigger
+it too.
+
 ## Available skills
 
 | Skill | Description |
