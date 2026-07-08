@@ -102,6 +102,30 @@ New skills are added as sibling folders under `skills/`.
 - Python 3.10+ and network access to `huggingface.co` (for the model-serving skills).
 - An AI coding agent that supports Agent Skills (e.g. Claude Code).
 
+## Disclaimer
+
+These skills drive an **AI coding agent that generates code**. That output is
+non-deterministic and may contain bugs, insecure patterns, or security
+vulnerabilities — regardless of the guardrails the skills try to enforce.
+
+By using these skills you acknowledge that:
+
+- **You are solely responsible** for reviewing, testing, and securing any generated
+  code before you run it, install its dependencies, or expose it on a network.
+- Generated services are intended for **local, single-user use only**. They ship
+  **without authentication or rate limiting** and must not be exposed beyond
+  `localhost` without additional hardening that is out of scope for these skills.
+- Generated projects download and execute **third-party models and dependencies**
+  (e.g. from the Hugging Face Hub and PyPI). Reviewing their licenses, provenance, and
+  trustworthiness — including any model that requests `trust_remote_code` — is your
+  responsibility.
+- The authors and maintainers accept **no liability** for any damage, data loss,
+  security incident, service disruption, or cost of any kind arising from the use of
+  these skills or the code they generate.
+
+The software is provided **"as is", without warranty of any kind**, as stated in the
+[LICENSE](LICENSE).
+
 ## License
 
 [MIT](LICENSE) © 2026 nynuz
