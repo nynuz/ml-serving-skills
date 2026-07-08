@@ -19,16 +19,16 @@ Or, using the [agentskills.io](https://agentskills.io) CLI, install everything a
 
 ```bash
 # all skills in this repo
-npx add-skill nynuz/ml-serving-skills
+npx skills add https://github.com/nynuz/ml-serving-skills
 
 # list what's available
-npx add-skill nynuz/ml-serving-skills --list
+npx skills add https://github.com/nynuz/ml-serving-skills --list
 
 # only specific skills
-npx add-skill nynuz/ml-serving-skills --skill hf-model-to-api
+npx skills add https://github.com/nynuz/ml-serving-skills --skill hf-model-to-api
 
 # non-interactive (CI/CD)
-npx add-skill nynuz/ml-serving-skills -y
+npx skills add https://github.com/nynuz/ml-serving-skills -y
 ```
 
 ## Available skills
